@@ -1,0 +1,608 @@
+@import "../../../utilities/variables.scss";
+
+
+.seccion_claro {
+  display: flex;
+  background-color: rgba(#ffffff, $alpha: 0.4);
+  flex-basis: $anchoSeccion + px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-top: 2px solid $colorFondoOscuro;
+  border-left: 2px solid $colorFondoOscuro;
+  box-sizing: border-box;
+  border-top-left-radius: 5px;
+
+  .datos {
+    display: flex;
+    width: $anchoDatos + px;
+    height: 100%;
+    flex-direction: column;
+
+    .titulo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      height: $altoTituloCliente + px;
+      background: rgba(0, 0, 0, 0.8);
+      font-size: 22px;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+
+    .lista {
+      display: flex;
+      flex-grow: 1;
+      height: $altoLista + px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      font-size: 15px;
+      font-weight: normal;
+      box-sizing: border-box;
+
+      .table {
+        width: 100%;
+        background-color: transparent;
+        text-align: center;
+        border-spacing: 0px;
+      }
+
+      .table-dark,
+      .table-dark > th,
+      .table-dark > td {
+        background-color: #030303;
+      }
+
+      .table-hover .table-dark:hover {
+        background-color: #030303;
+      }
+
+      .table-hover .table-dark:hover > td,
+      .table-hover .table-dark:hover > th {
+        background-color: #030303;
+      }
+
+      .table-active,
+      .table-active > th,
+      .table-active > td {
+        background-color: rgba(0, 0, 0, 0.075);
+      }
+
+      .table-hover .table-active:hover {
+        background-color: rgba(0, 0, 0, 0.075);
+      }
+
+      .table-hover .table-active:hover > td,
+      .table-hover .table-active:hover > th {
+        background-color: rgba(0, 0, 0, 0.075);
+      }
+
+      .table .thead-dark th {
+        color: #fff;
+        background-color: #21252980;
+        border-color: #121416;
+        padding: 10px;
+      }
+      .table .tbody-dark td {
+        padding: 7px;
+      }
+
+      .table-dark {
+        color: #fff;
+        background-color: #21252980;
+      }
+
+      .table-dark.table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      .table-dark.table-hover tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.075);
+      }
+    }
+    .nuevo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      height: $altoNuevo + px;
+      box-sizing: border-box;
+      background: #00000099;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .nuevo:hover {
+      background: #00000080;
+    }
+  }
+
+  .filtros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: $anchoFiltros + px;
+    height: 100%;
+    background: $fondoFiltroCliente;
+
+    .busqueda{
+      height: $altoBusquedaCliente+px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      
+      .titulo_filtro{
+        height: $altoTituloFiltroCliente+px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        background-color: $fondoTituloFiltroCliente;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .cuerpo_filtro{
+        flex-grow: 1;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        label{
+          height: $altoLabelFiltroCliente+px;
+        }
+        input{
+          margin-bottom: 6px;
+          height: 18px;
+          width: 80%;
+          text-align: center;
+          border: none;
+          padding: 3px;
+          color: $textoClaro;
+          background-color: $fondoInputFiltroCliente;
+          border: 2px solid black;
+          border-radius: 5px;
+          transition: all 0.3s;
+
+          &:focus{
+            border:2px solid $focusInputFiltroCliente;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .busqueda_avanzada{
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .titulo_filtro{
+        height: $altoTituloFiltroCliente+px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        background-color: $fondoTituloFiltroCliente;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      
+      .cuerpo_filtro{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
+
+        button{
+          height: $altoBotonBusqAvanzCliente+px;
+          width: 80%;
+          margin-bottom: 18px;
+          background-color: $fondoBotonFiltroCliente;
+          text-decoration: none;
+          border: none;
+          color: $textoClaro;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: all 0.3s;
+        }
+
+        .morosos{
+          margin-top: 17px;
+        }
+
+        .seleccionado_true{
+          background-color: $fondoBotonSeleccionadoFiltroCliente;
+        }
+
+        .deshabilitado{
+          background-color: $deshabilitadoFiltroCliente;
+          color: $textoDeshabilitadoFiltroCliente;
+          cursor: default;
+        }
+      }
+    }
+
+    .borrar_filtros{
+      height: $altoBorrarFiltroCliente+px;
+      background: #585858c5;
+      width: 100%;
+      justify-content: center;
+
+      button{
+        height: 100%;
+        width: 100%;
+        background-color: $fondoBorrarFiltroCliente;
+        text-decoration: none;
+        border: none;
+        color: $textoClaro;
+        cursor: pointer;
+
+        &:hover{
+          background-color: $colorClaroTransparenteCliente;
+        }
+      }
+    }
+  }
+}
+
+.seccion_oscuro {
+  display: flex;
+  background-color: rgba(#ffffff, $alpha: 0.4);
+  flex-basis: $anchoSeccion + px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-top: 2px solid $colorFondoOscuro;
+  border-left: 2px solid $colorFondoOscuro;
+  box-sizing: border-box;
+  border-top-left-radius: 5px;
+
+  .datos {
+    display: flex;
+    width: $anchoDatos + px;
+    height: 100%;
+    flex-direction: column;
+
+    .titulo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      height: $altoTituloCliente + px;
+      background: rgba(0, 0, 0, 0.8);
+      font-size: 22px;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+
+    .lista {
+      display: flex;
+      flex-grow: 1;
+      height: $altoLista + px;
+      font-size: 15px;
+      font-weight: normal;
+      box-sizing: border-box;
+
+      .table {
+        width: 100%;
+        background-color: transparent;
+        text-align: center;
+        border-spacing: 0px;
+      }
+
+      .table-dark,
+      .table-dark > th,
+      .table-dark > td {
+        background-color: #030303;
+      }
+
+      .table-hover .table-dark:hover {
+        background-color: #030303;
+      }
+
+      .table-hover .table-dark:hover > td,
+      .table-hover .table-dark:hover > th {
+        background-color: #030303;
+      }
+
+      .table-active,
+      .table-active > th,
+      .table-active > td {
+        background-color: rgba(0, 0, 0, 0.075);
+      }
+
+      .table-hover .table-active:hover {
+        background-color: rgba(0, 0, 0, 0.075);
+      }
+
+      .table-hover .table-active:hover > td,
+      .table-hover .table-active:hover > th {
+        background-color: rgba(0, 0, 0, 0.075);
+      }
+      thead, tbody{
+        display: block;
+      }
+
+      .tbody-dark {
+        height: 437px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+      }
+
+      .table .thead-dark th {
+        color: #fff;
+        background-color: #21252980;
+        border-color: #121416;
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .table .tbody-dark td {
+        padding: 0px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
+
+      .table-dark {
+        color: #fff;
+        background-color: #21252980;
+      }
+
+      .table-dark.table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      .table-dark.table-hover tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.075);
+      }
+      
+      .cabeceraNombre{
+        width: 174px;
+        max-width: 174px;
+        overflow: hidden;
+      }
+      .cabeceraApellidos{
+        width: 225px;
+        max-width: 225px;
+        overflow: hidden;
+      }
+      .cabeceraDNI{
+        width: 129px;
+        max-width: 129px;
+        overflow: hidden;
+      }
+      .cabeceraTelefono{
+        width: 124px;
+        max-width: 124px;
+        overflow: hidden;
+      }
+      .cabeceraVisualizar{
+        width: 70px;
+        max-width: 70px;
+        overflow: hidden;
+      }
+      .cabeceraSeleccionar{
+        width: 70px;
+        max-width: 70px;
+        overflow: hidden;
+      }
+      .cabeceraEditar{
+        width: 70px;
+        max-width: 70px;
+        overflow: hidden;
+      }
+
+      .colNombre{
+        width: 174px;
+        max-width: 174px;
+        overflow: hidden;
+      }
+      .colApellidos{
+        width: 225px;
+        max-width: 225px;
+        overflow: hidden;
+      }
+      .colDNI{
+        width: 129px;
+        max-width: 129px;
+        overflow: hidden;
+      }
+      .colTelefono{
+        width: 124px;
+        max-width: 124px;
+        overflow: hidden;
+      }
+      .colVisualizar{
+        width: 70px;
+        max-width: 70px;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover{
+          background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.397) 0%, rgba(0, 0, 0, 0)80%);
+        }
+      }
+      .colSeleccionar{
+        width: 70px;
+        max-width: 70px;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover{
+          background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.397) 0%, rgba(0, 0, 0, 0)80%);
+        }
+      }
+      .colEditar{
+        width: 70px;
+        max-width: 70px;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover{
+          background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.397) 0%, rgba(0, 0, 0, 0)80%);
+        }
+      }
+      .seleccionado{
+        background-color: #00000080 !important;
+      }
+    }
+    .nuevo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      height: $altoNuevo + px;
+      box-sizing: border-box;
+      background: #00000099;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .nuevo:hover {
+      background: #00000080;
+    }
+  }
+
+  .filtros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: $anchoFiltros + px;
+    height: 100%;
+    background: $fondoFiltroCliente;
+
+    .busqueda{
+      height: $altoBusquedaCliente+px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      
+      .titulo_filtro{
+        height: $altoTituloFiltroCliente+px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        background-color: $fondoTituloFiltroCliente;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .labelNombre{
+        margin-top: 6px;
+      }
+      .cuerpo_filtro{
+        flex-grow: 1;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        label{
+          height: $altoLabelFiltroCliente+px;
+        }
+        input{
+          margin-bottom: 6px;
+          height: 30px;
+          width: 80%;
+          text-align: center;
+          border: none;
+          padding: 3px;
+          color: $textoClaro;
+          background-color: $fondoInputFiltroCliente;
+          border: 2px solid black;
+          border-radius: 5px;
+          transition: all 0.3s;
+
+          &:focus{
+            border:2px solid $focusInputFiltroCliente;
+            font-size: 16px;
+          }
+        }
+        
+        input[type="search"]::-webkit-search-cancel-button {
+          -webkit-appearance: none;
+        }
+        input[type="search"]::-webkit-calendar-picker-indicator {
+          display: none;
+        }
+      }
+    }
+
+    .busqueda_avanzada{
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .titulo_filtro{
+        height: $altoTituloFiltroCliente+px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        background-color: $fondoTituloFiltroCliente;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      
+      .cuerpo_filtro{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: space-evenly;
+
+        button{
+          height: $altoBotonBusqAvanzCliente+px;
+          width: 80%;
+          background-color: $fondoBotonFiltroCliente;
+          text-decoration: none;
+          border: none;
+          color: $textoClaro;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: all 0.3s;
+        }
+
+        .seleccionado_true{
+          background-color: $fondoBotonSeleccionadoFiltroCliente;
+        }
+
+        .deshabilitado{
+          background-color: $deshabilitadoFiltroCliente;
+          color: $textoDeshabilitadoFiltroCliente;
+          cursor: default;
+        }
+      }
+    }
+
+    .borrar_filtros{
+      height: $altoBorrarFiltroCliente+px;
+      background: #585858c5;
+      width: 100%;
+      justify-content: center;
+
+      button{
+        height: 100%;
+        width: 100%;
+        background-color: $fondoBorrarFiltroCliente;
+        text-decoration: none;
+        border: none;
+        color: $textoClaro;
+        cursor: pointer;
+
+        &:hover{
+          background-color: $colorClaroTransparenteCliente;
+        }
+      }
+    }
+  }
+}

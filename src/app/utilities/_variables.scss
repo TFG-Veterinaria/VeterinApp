@@ -1,0 +1,145 @@
+//Colores usados en la aplicación
+$color1:rgb(25, 94, 82);
+$color2:rgb(34, 178, 76);
+$color3:rgb(123, 197, 67);
+$color4:rgb(44, 188, 146);
+$color5:rgb(171, 252, 194);
+$color6:rgb(16, 58, 52);
+$color7:rgb(203, 233, 228);
+$color8:rgb(159, 165, 164);
+$textoOscuro: rgb(14, 14, 14);
+$textoClaro: rgb(250, 250, 250);
+$textoDeshabilitado: rgb(218, 218, 218);
+
+//Variables que definen la interfaz básica
+$altoApp: 720;
+$anchoApp: 1280;
+$altoTop: 160;
+$altoSeccion: 560;
+$anchoSeccion: 1104;
+$anchoLogo: 363;
+$anchoAjustes: 186;
+
+//Variables para la sección del menú
+$anchoMenu: 158;
+$altoItemMenu: 108;
+
+//Variables para la sección de selectores
+$anchoSelectores: 731;
+$altoSelectores: 160;
+
+//Variables para los selectores
+$anchoExterior: 171;
+$altoExterior: 153;
+$altoInterior: 128;
+$altoTexto: 25;
+$anchoSeccion1: 120;
+$colorFondoOscuro: rgb(87, 87, 87);
+$colorFondoClaro: rgb(209, 209, 209);
+$colorFondoOscuroTransparente: rgba(0, 0, 0, 0.2);
+$colorFondoClaroTransparente: rgba(255, 255, 255, 0.2);
+$altoImagenSelector: 120;
+$anchoImagenSelector: 120;
+
+//Variables para lista de clientes
+$altoTituloCliente: 42;
+$altoLista: 474;
+$altoNuevo: 42;
+$anchoDatos: 862;
+$anchoFiltros: 240;
+$altoTituloFiltroCliente: 42;
+$altoBusquedaCliente: 272;
+$altoLabelFiltroCliente: 20;
+$altoInputFiltroCliente: 27;
+$altoBorrarFiltroCliente: 42;
+$altoBotonBusqAvanzCliente: 30;
+$fondoFiltroCliente: rgb(29, 29, 29);
+$focusInputFiltroCliente: rgb(202, 202, 202);
+$fondoTituloFiltroCliente: rgb(0, 0, 0);
+$fondoInputFiltroCliente: rgb(107, 107, 107);
+$fondoBorrarFiltroCliente: rgb(87, 87, 87);
+$fondoBotonFiltroCliente: rgb(107, 107, 107);
+$fondoBotonSeleccionadoFiltroCliente: rgb(53, 44, 63);
+$colorClaroTransparenteCliente: rgba(255, 255, 255, 0.302);
+$deshabilitadoFiltroCliente: rgb(41, 41, 41);
+$textoDeshabilitadoFiltroCliente: rgb(102, 102, 102);
+
+//Variables para la lista de mascotas
+$altoTituloMascota: 42;
+$altoTituloFiltroMascota: 42;
+$altoBusquedaMascota: 380;
+$altoLabelFiltroMascota: 20;
+$altoInputFiltroMascota: 27;
+$altoBorrarFiltroMascota: 42;
+$altoBotonBusqAvanzMascota: 30;
+$fondoFiltroMascota: rgb(29, 29, 29);
+$focusInputFiltroMascota: rgb(202, 202, 202);
+$fondoTituloFiltroMascota: rgb(0, 0, 0);
+$fondoInputFiltroMascota: rgb(107, 107, 107);
+$fondoBorrarFiltroMascota: rgb(87, 87, 87);
+$fondoBotonFiltroMascota: rgb(107, 107, 107);
+$fondoBotonSeleccionadoFiltroMascota: rgb(53, 44, 63);
+$colorClaroTransparenteMascota: rgba(255, 255, 255, 0.302);
+$deshabilitadoFiltroMascota: rgb(41, 41, 41);
+$textoDeshabilitadoFiltroMascota: rgb(102, 102, 102);
+
+//Variables para la lista de veterinarios
+$altoTituloVeterinario: 42;
+$altoTituloFiltroVeterinario: 42;
+$altoBusquedaVeterinario: 380;
+$altoLabelFiltroVeterinario: 20;
+$altoInputFiltroVeterinario: 27;
+$altoBorrarFiltroVeterinario: 42;
+$altoBotonBusqAvanzVeterinario: 30;
+$fondoFiltroVeterinario: rgb(29, 29, 29);
+$focusInputFiltroVeterinario: rgb(202, 202, 202);
+$fondoTituloFiltroVeterinario: rgb(0, 0, 0);
+$fondoInputFiltroVeterinario: rgb(107, 107, 107);
+$fondoBorrarFiltroVeterinario: rgb(87, 87, 87);
+$fondoBotonFiltroVeterinario: rgb(107, 107, 107);
+$fondoBotonSeleccionadoFiltroVeterinario: rgb(53, 44, 63);
+$colorClaroTransparenteVeterinario: rgba(255, 255, 255, 0.302);
+$deshabilitadoFiltroVeterinario: rgb(41, 41, 41);
+$textoDeshabilitadoFiltroVeterinario: rgb(102, 102, 102);
+
+//Variables para la pantalla de bienvenida
+$fondoDegradado: rgba(8, 37, 29, 0.882);
+$textoInicio: rgba(255, 255, 255, 0.561);
+
+//Variables para la sección de ajustes
+$altoTitulo: 62;
+$altoFieldSet: 109;
+$altoCerrarSesion: 40;
+$tituloOscuro: rgba(0, 0, 0, 0.522);
+$tituloOscuroHover: rgba(0, 0, 0, 0.439);
+$border: rgb(0, 0, 0);
+$fondoBoton: rgb(224, 224, 224);
+$fondoBotonSeleccionado: rgba(70, 144, 255, 0.745);
+$fondoBotonHover: rgba(56, 56, 56, 0.745);
+$textoOscuroAjustes: rgb(56, 56, 56);
+$fondoBotonDeshabilitado: rgb(83, 83, 83);
+
+//Variables para el formulario de veterinarios
+$altoGuardar: 50;
+$bordeGuardar: rgb(95, 95, 95);
+$colorFondoGuardar: rgba(0, 0, 0, 0.192);
+$colorFondoHoverGuardar: rgba(0, 0, 0, 0.431);
+$colorFondoFieldset: rgba(0, 0, 0, 0.137);
+$colorInput: rgba(146, 146, 146, 0.478);
+$colorInputError: rgba(255, 140, 140, 0.478);
+$bordeInput: rgb(75, 75, 75);
+
+//Variables para el formulario de clinica
+$altoTituloClinica: 42;
+$letraTituloClinica: 25;
+$colorFondoGuardarClinica: rgba(212, 212, 212, 0.562);
+$colorSubirImagenClinica: rgba(113, 113, 113, 0.6);
+
+//Variables para el resumen de mascotas
+$altoTituloResumenMascota: 50;
+$fondoTituloResumenMascota: rgba(0, 0, 0, 0.85);
+$fondoMenuResumenMascota: rgba(0, 0, 0, 0.377);
+$fondoSeccionResumenMascota: rgba(17, 37, 33, 0.839);
+
+//Variables para el formulario de contactos
+$fondoFormularioContactos: rgb(79, 109, 104);

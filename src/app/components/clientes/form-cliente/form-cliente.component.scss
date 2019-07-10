@@ -1,0 +1,462 @@
+@import "../../../utilities/variables.scss";
+
+.seccion_oscuro {
+  display: flex;
+  background-color: rgba(#8a8a8a, $alpha: 0.3);
+  flex-basis: $anchoSeccion + px;
+  align-items: center;
+  justify-content: center;
+  height: $altoSeccion + px;
+  border-top: 2px solid $colorFondoOscuro;
+  border-left: 2px solid $colorFondoOscuro;
+  box-sizing: border-box;
+  border-top-left-radius: 5px;
+
+  .titulo {
+    background-color: $tituloOscuro;
+    width: 100%;
+    display: flex;
+    height: $altoTitulo + px;
+    justify-content: center;
+    align-items: center;
+
+    .volver {
+      background-image: url("../../../../assets/img/back_oscuro.png");
+      width: 30px;
+      height: 30px;
+      position: fixed;
+      left: 200px;
+      cursor: pointer;
+
+      &:hover {
+        background-image: url("../../../../assets/img/back_medio.png");
+      }
+    }
+
+    span {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  .formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+
+    .datos_y_contactos {
+      display: flex;
+      height: 193px;
+      padding: 20px 50px 10px;
+
+      .datos_basicos {
+        display: flex;
+        width: 50%;
+        padding-right: 10px;
+
+        fieldset {
+          display: flex;
+          background-color: $colorFondoFieldset;
+          width: 100%;
+
+          legend {
+            font-weight: bold;
+            font-size: 18px;
+          }
+
+          .form_arriba {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+      .datos_basicos_nuevo {
+        display: flex;
+        width: 100%;
+
+        fieldset {
+          display: flex;
+          background-color: $colorFondoFieldset;
+          width: 100%;
+
+          legend {
+            font-weight: bold;
+            font-size: 18px;
+          }
+
+          .form_arriba {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+      .contactos {
+        display: flex;
+        width: 50%;
+        margin-left: 10px;
+        flex-direction: column;
+        margin-top: 10px;
+        border: 1px solid white;
+
+        .titulo_tabla {
+          display: flex;
+          background-color: #000000a1;
+          height: 25px;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+        }
+
+        .tabla_contactos {
+          display: flex;
+          flex-grow: 1;
+          font-size: 15px;
+          font-weight: normal;
+          box-sizing: border-box;
+
+          .table {
+            width: 100%;
+            background-color: transparent;
+            text-align: center;
+            border-spacing: 0px;
+          }
+
+          .table-dark,
+          .table-dark > th,
+          .table-dark > td {
+            background-color: #030303;
+          }
+
+          .table-hover .table-dark:hover {
+            background-color: #030303;
+          }
+
+          .table-hover .table-dark:hover > td,
+          .table-hover .table-dark:hover > th {
+            background-color: #030303;
+          }
+
+          .table-active,
+          .table-active > th,
+          .table-active > td {
+            background-color: rgba(0, 0, 0, 0.075);
+          }
+
+          .table-hover .table-active:hover {
+            background-color: rgba(0, 0, 0, 0.075);
+          }
+
+          .table-hover .table-active:hover > td,
+          .table-hover .table-active:hover > th {
+            background-color: rgba(0, 0, 0, 0.075);
+          }
+          thead,
+          tbody {
+            display: block;
+          }
+
+          .tbody-dark {
+            height: 94px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: #abababa3;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+          }
+
+          .table .thead-dark th {
+            color: #fff;
+            background-color: #21252980;
+            border-color: #121416;
+            padding: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+          .table .tbody-dark td {
+            padding: 0px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+          }
+
+          .table-dark {
+            color: #fff;
+            background-color: #21252980;
+          }
+
+          .table-dark.table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(29, 56, 56, 0.356);
+          }
+
+          .table-dark.table-striped tbody tr:nth-of-type(even) {
+            background-color: rgba(29, 56, 56, 0.178);
+          }
+
+          .table-dark.table-hover tbody tr:hover {
+            background-color: rgba(29, 56, 56, 0.705);
+          }
+
+          .cabeceraNombre {
+            width: 174px;
+            max-width: 174px;
+            overflow: hidden;
+          }
+          .cabeceraTelefono {
+            width: 225px;
+            max-width: 225px;
+            overflow: hidden;
+          }
+          .cabeceraTipo {
+            width: 129px;
+            max-width: 129px;
+            overflow: hidden;
+          }
+          .cabeceraQuitar {
+            width: 70px;
+            max-width: 70px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .colNombre {
+            width: 174px;
+            max-width: 174px;
+            overflow: hidden;
+          }
+          .colTelefono {
+            width: 225px;
+            max-width: 225px;
+            overflow: hidden;
+          }
+          .colTipo {
+            width: 129px;
+            max-width: 129px;
+            overflow: hidden;
+          }
+          .colQuitar {
+            width: 70px;
+            max-width: 70px;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            &:hover{
+              background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0)50%);
+            }
+          }
+        }
+        .agregar_contacto {
+          cursor: pointer;
+          display: flex;
+          background-color: #1b1f1de0;
+          height: 25px;
+          justify-content: center;
+          align-items: center;
+          font-size: 14px;
+          transition: 0.3s all;
+
+          &:hover{
+            background-color: #1b1f1da1;
+          }
+        }
+      }
+    }
+    .datos_opcionales {
+      display: flex;
+      flex-grow: 1;
+      padding: 10px 50px 20px;
+
+      fieldset {
+        display: flex;
+        background-color: $colorFondoFieldset;
+        width: 100%;
+
+        legend {
+          font-weight: bold;
+          font-size: 18px;
+        }
+        .form_abajo {
+          display: flex;
+
+          .opcionales_izq {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            padding-right: 26px;
+          }
+          .opcionales_dcha {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            padding-left: 26px;
+          }
+        }
+      }
+    }
+
+    .texto {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      span {
+        display: none;
+      }
+      &:hover span {
+        display: block;
+        position: fixed;
+        overflow: hidden;
+        border: 1px solid #b1b1b1ea;
+        background-color: #ff6767c0;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      label {
+        flex-grow: 1;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      input {
+        margin: 0px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border: none;
+        text-align: center;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.048));
+        border-bottom: 1px solid #cccccc;
+        transition: all ease-out 0.3s;
+        box-sizing: border-box;
+        color: $textoClaro;
+
+        &:focus {
+          margin-bottom: 2px;
+          margin-top: 2px;
+          font-size: 20px;
+          background-color: $colorInput;
+          border: 1px solid #cccccc;
+        }
+      }
+    }
+
+    #dni {
+      width: 230px;
+    }
+    #nombre {
+      width: 330px;
+    }
+    #apellidos {
+      width: 325px;
+    }
+    #dni_nuevo {
+      width: 760px;
+    }
+    #nombre_nuevo {
+      width: 760px;
+    }
+    #apellidos_nuevo {
+      width: 760px;
+    }
+    #direccion {
+      width: 325px;
+    }
+    #poblacion {
+      width: 325px;
+    }
+    #codPostal {
+      width: 300px;
+    }
+    #email {
+      width: 350px;
+    }
+    #fecNac {
+      width: 250px;
+    }
+
+    .texto_error {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      span {
+        display: none;
+      }
+      &:hover span {
+        display: block;
+        position: fixed;
+        overflow: hidden;
+        border: 1px solid #b1b1b1ea;
+        background-color: #ff6767c0;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      label {
+        flex-grow: 1;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      input {
+        margin: 0px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border: none;
+        text-align: center;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.048));
+        border-bottom: 1px solid #ca0000;
+        transition: all ease-out 0.3s;
+        box-sizing: border-box;
+        color: $textoClaro;
+
+        &:focus {
+          margin-bottom: 2px;
+          margin-top: 2px;
+          font-size: 20px;
+          background-color: $colorInputError;
+          border: 1px solid #ca0000;
+        }
+      }
+    }
+  }
+
+  .guardar {
+    width: 100%;
+    display: flex;
+    height: $altoGuardar + px;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid $colorFondoOscuro;
+    box-sizing: border-box;
+
+    button {
+      height: 100%;
+      background-color: $colorFondoGuardar;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 22px;
+      border: 0px;
+      color: $textoClaro;
+      transition: all 0.5s;
+      &:hover {
+        background-color: $colorFondoHoverGuardar;
+      }
+    }
+  }
+}

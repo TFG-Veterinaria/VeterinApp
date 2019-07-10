@@ -1,0 +1,124 @@
+@import "../../utilities/variables.scss";
+
+.seccionMenu_claro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: $anchoMenu+px;
+    height: $altoSeccion+px;
+
+    .item{
+        display: flex;
+        margin-bottom: 30px;
+        width: 100%;
+
+        .fondo{
+            $border: 4;
+            background: rgba($color: $colorFondoClaro, $alpha: 0.5);
+            height: $altoItemMenu+px;
+            width: 100%;
+            border: $border+px ridge $colorFondoOscuro;
+            border-radius: 5px;
+            box-sizing: border-box;
+
+            .clientes{
+                height: $altoItemMenu - 2 * $border+px;
+                width: 100%;
+                background: url(../../../assets/img/clientes.png);
+                &:hover{
+                    background-color: $colorFondoOscuroTransparente;
+                    cursor: pointer;
+                }
+            }
+            .mascotas{
+                height: $altoItemMenu - 2 * $border+px;
+                width: 100%;
+                background: url(../../../assets/img/mascotas.png);
+                &:hover{
+                    background-color: $colorFondoOscuroTransparente;
+                    cursor: pointer;
+                }
+            }
+            .calendario{
+                height: $altoItemMenu - 2 * $border+px;
+                width: 100%;
+                background: url(../../../assets/img/calendario.png);
+                &:hover{
+                    background-color: $colorFondoOscuroTransparente;
+                    cursor: pointer;
+                }
+            }
+            .operaciones{
+                height: $altoItemMenu - 2 * $border+px;
+                width: 100%;
+                background: url(../../../assets/img/operaciones.png);
+                &:hover{
+                    background-color: $colorFondoOscuroTransparente;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.seccionMenu_oscuro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: $anchoMenu+px;
+    height: $altoSeccion+px;
+
+    .item{
+        display: flex;
+        margin-bottom: 30px;
+        width: 100%;
+
+        .fondo{
+            $border: 4;
+            background: rgba($color: $colorFondoOscuro, $alpha: 0.5);
+            height: $altoItemMenu+px;
+            width: 100%;
+            border: $border+px ridge $colorFondoOscuro;
+            border-radius: 5px;
+            box-sizing: border-box;
+
+            
+            .clientes{
+                height: $altoItemMenu - 2 * $border+px;
+                width: 100%;
+                background: linear-gradient($colorFondoOscuroTransparente, $colorFondoOscuroTransparente), url(../../../assets/img/clientes-oscuro.png);
+                &:hover{
+                    background-color: $colorFondoClaroTransparente;
+                    cursor: pointer;
+                }
+            }
+            .mascotas{
+                height: $altoItemMenu - 2 * $border+px;
+                width: 100%;
+                background: linear-gradient($colorFondoOscuroTransparente, $colorFondoOscuroTransparente), url(../../../assets/img/mascotas-oscuro.png);
+                &:hover{
+                    background-color: $colorFondoClaroTransparente;
+                    cursor: pointer;
+                }
+            }
+            .calendario{
+                height: $altoItemMenu - 2 * $border+px;
+                width: 100%;
+                background: linear-gradient($colorFondoOscuroTransparente, $colorFondoOscuroTransparente), url(../../../assets/img/calendario-oscuro.png);
+                &:hover{
+                    background-color: $colorFondoClaroTransparente;
+                    cursor: pointer;
+                }
+            }
+            .operaciones{
+                height: $altoItemMenu - 2 * $border+px;
+                width: 100%;
+                background: linear-gradient($colorFondoOscuroTransparente, $colorFondoOscuroTransparente), url(../../../assets/img/operaciones-oscuro.png);
+                &:hover{
+                    background-color: $colorFondoClaroTransparente;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

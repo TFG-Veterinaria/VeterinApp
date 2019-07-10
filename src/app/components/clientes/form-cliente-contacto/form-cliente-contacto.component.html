@@ -1,0 +1,26 @@
+<div class="container" (document:mousemove)='tooltip($event)'>
+  <div class="titulo">
+    Nuevo contacto
+  </div>
+  <div class="cerrar" (click)="cerrarVentana()"><img src="../../../../assets/img/close_oscuro.png" /></div>
+  <div class="datos">
+      <div class="nombre{{errores.nombre ? '_error' : ''}}">
+        <label for="nombre">Nombre</label><input id="nombre" type="text" [(ngModel)]="contactoEditado.nombre" (ngModelChange)="cambia('nombre')" />
+        <span class="tooltip" *ngIf="errores.nombre=='obligatorio'">Es obligatorio rellenar este campo</span>
+      </div>
+      <div class="telefono{{errores.telefono ? '_error' : ''}}">
+        <label for="telefono">Teléfono</label><input id="telefono" type="text" [(ngModel)]="contactoEditado.telefono" (ngModelChange)="cambia('telefono')" />
+        <span class="tooltip" *ngIf="errores.telefono=='obligatorio'">Es obligatorio rellenar este campo</span>
+      </div>
+      <div class="tipo">
+        <fieldset>
+          <legend>Tipo</legend>
+          <div class="item"><input type="radio" [(ngModel)]="contactoEditado.tipo" name="buildTool" value="movil" id="movil"><label for="movil">Movil</label></div>
+          <div class="item"><input type="radio" [(ngModel)]="contactoEditado.tipo" name="buildTool" value="fijo" id="fijo"><label for="fijo">Fijo</label></div>
+        </fieldset>
+      </div>
+  </div>
+  <div class="botones">
+    <div id="continuar" (click)="guardarContacto()">Añadir</div>
+  </div>
+</div>
