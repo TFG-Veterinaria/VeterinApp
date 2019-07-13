@@ -187,67 +187,35 @@ export class FormClienteComponent implements OnInit {
   cambia(key) {
     switch (key) {
       case 'nombre':
-        if (this.errores.nombre != '') {
-          if (this.clienteEditado.nombre) {
-            this.errores.nombre = '';
-          }
-        }
+        this.errores.nombre = '';
         break;
 
       case 'apellidos':
-        if (this.errores.apellidos != '') {
-          if (this.clienteEditado.apellidos) {
-            this.errores.apellidos = '';
-          }
-        }
+        this.errores.apellidos = '';
         break;
 
       case 'direccion':
-        if (this.errores.direccion != '') {
-          if (this.clienteEditado.direccion) {
-            this.errores.direccion = '';
-          }
-        }
+        this.errores.direccion = '';
         break;
 
       case 'codPostal':
-        if (this.errores.codPostal != '') {
-          if (this.clienteEditado.codPostal) {
-            this.errores.codPostal = '';
-          }
-        }
+        this.errores.codPostal = '';
         break;
 
       case 'poblacion':
-        if (this.errores.poblacion != '') {
-          if (this.clienteEditado.poblacion) {
-            this.errores.poblacion = '';
-          }
-        }
+        this.errores.poblacion = '';
         break;
 
       case 'email':
-        if (this.errores.email != '') {
-          if (this.clienteEditado.email) {
-            this.errores.email = '';
-          }
-        }
+        this.errores.email = '';
         break;
 
       case 'dni':
-        if (this.errores.dni != '') {
-          if (this.clienteEditado.dni) {
-            this.errores.dni = '';
-          }
-        }
+        this.errores.dni = '';
         break;
 
       case 'fecNac':
-        if (this.errores.fecNac != '') {
-          if (this.clienteEditado.fecNac) {
-            this.errores.fecNac = '';
-          }
-        }
+        this.errores.fecNac = '';
         break;
 
       default:

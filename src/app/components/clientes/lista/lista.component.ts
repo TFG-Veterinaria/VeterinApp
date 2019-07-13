@@ -5,6 +5,7 @@ import { Cliente, Contacto, Mascota, Cuidado } from '../../../app.dataModels';
 import { Router } from '@angular/router';
 import { FiltroCliente } from '../../../models/filtros';
 import { CabeceraTabla } from '../../../models/tablas';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-lista',
@@ -35,7 +36,8 @@ export class ListaComponent implements OnInit {
 
   constructor(
     private globalService: GlobalService,
-    private router: Router
+    private router: Router,
+    private cookieService: CookieService
   ) {
 
   }
@@ -334,5 +336,10 @@ export class ListaComponent implements OnInit {
       if (a.apellidos.toLowerCase() < b.apellidos.toLowerCase()) return -1;
       return 0;
     })
+  }
+  
+  visualizar(el: Cliente) {
+    this.cookieService.set('clienteDisplay', JSON.stringify(el));
+    this.globalService.generaVentana(300, 450, '/displayCliente', null);
   }
 }

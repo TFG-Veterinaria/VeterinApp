@@ -24,6 +24,7 @@ import { ResumenComponent } from './components/mascotas/resumen/resumen.componen
 import { AvisoNuevoTratamientoComponent } from './components/operaciones/tratamientos/aviso-nuevo-tratamiento/aviso-nuevo-tratamiento.component';
 import { FormClienteContactoComponent } from './components/clientes/form-cliente-contacto/form-cliente-contacto.component';
 import { DisplayComponent as DisplayVeterinario } from './components/app-data/veterinarios/display/display.component';
+import { DisplayComponent as DisplayCliente } from './components/clientes/display/display.component';
 import { ListaComponent as ListaVacunas } from './components/operaciones/vacunas/lista/lista.component';
 import { FormVacunaComponent } from './components/operaciones/vacunas/form-vacuna/form-vacuna.component';
 import { AvisoNuevaVacunaComponent } from './components/operaciones/vacunas/aviso-nueva-vacuna/aviso-nueva-vacuna.component';
@@ -62,6 +63,7 @@ const routes: Routes = [
     { path: 'formPrueba', component: FormPruebaComponent },
     { path: 'mascota/:idMascota', component: ResumenComponent },
     { path: 'displayVeterinario', component: DisplayVeterinario },
+    { path: 'displayCliente', component: DisplayCliente },
     { path: 'vacunas', component: ListaVacunas },
     { path: 'formVacuna', component: FormVacunaComponent },
     { path: 'avisoNuevaVacuna', component: AvisoNuevaVacunaComponent },

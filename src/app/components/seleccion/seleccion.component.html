@@ -16,7 +16,7 @@
         <div class="seccion1 addclient"  [routerLink]="['/formClientes']"></div>
       </ng-template>
       <ng-template [ngIf]="cliente._id!=0">
-        <div class="seccion1">
+        <div class="seccion1" (click)="irA('ver_cliente')">
           <div *ngIf="sinCliente" class="seccionEspecial">{{ cliente.nombre }}</div>
           <div *ngIf="!sinCliente" class="seccionNombre {{claseNombreCliente}}">{{ cliente.nombre }}</div>
           <hr *ngIf="!sinCliente">

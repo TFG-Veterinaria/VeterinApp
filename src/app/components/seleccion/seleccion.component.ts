@@ -44,9 +44,9 @@ export class SeleccionComponent implements OnInit {
 
   ngOnInit() {
     this.tema = "_" + this.globalService.getTema();
-    if(this.cliente){
-      if(this.cliente._id=="100000000000000000000000"){
-        this.sinCliente=true;
+    if (this.cliente) {
+      if (this.cliente._id == "100000000000000000000000") {
+        this.sinCliente = true;
       }
     }
     this.getContacto();
@@ -145,45 +145,50 @@ export class SeleccionComponent implements OnInit {
     }
   }
 
-  getEdadMascota(){
-    if(this.mascota){
-      if(this.mascota._id != "0"){
+  getEdadMascota() {
+    if (this.mascota) {
+      if (this.mascota._id != "0") {
         let fechaFinal: number = Date.now();
-        if(this.mascota.fecBaj){
+        if (this.mascota.fecBaj) {
           fechaFinal = new Date(this.mascota.fecBaj).getTime();
         }
         let diferencia = Math.abs(fechaFinal - new Date(this.mascota.fecNac).getTime());
-        let años = Math.floor((diferencia / (1000 * 3600 * 24))/365.25);
+        let años = Math.floor((diferencia / (1000 * 3600 * 24)) / 365.25);
         let meses: number;
         let mesNac = new Date(this.mascota.fecNac).getMonth() + 1;
-        let mesHoy = this.time.getMonth()+1;
-        meses = mesHoy-mesNac;
-        if(meses<0){
-          meses = meses +12;
+        let mesHoy = this.time.getMonth() + 1;
+        meses = mesHoy - mesNac;
+        if (meses < 0) {
+          meses = meses + 12;
         }
         let a = " años ";
         let m = " meses ";
-        if(años==1){
+        if (años == 1) {
           a = " año "
         }
-        if(meses==1){
+        if (meses == 1) {
           m = " mes "
         }
 
-        this.edadMascota= años+a+"y "+meses+m;
+        this.edadMascota = años + a + "y " + meses + m;
       }
     }
   }
 
-  irA(key){
+  irA(key) {
     switch (key) {
       case 'resumen_mascota':
-        this.router.navigate(["mascota/"+this.mascota._id]);
+        this.router.navigate(["mascota/" + this.mascota._id]);
         break;
 
       case 'ver_veterinario':
         this.cookieService.set('veterinarioDisplay', JSON.stringify(this.veterinario));
         this.globalService.generaVentana(250, 350, '/displayVeterinario', null);
+        break;
+
+      case 'ver_cliente':
+        this.cookieService.set('clienteDisplay', JSON.stringify(this.cliente));
+        this.globalService.generaVentana(300, 450, '/displayCliente', null);
         break;
 
       default:
