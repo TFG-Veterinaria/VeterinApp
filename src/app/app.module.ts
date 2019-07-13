@@ -51,7 +51,8 @@ import { FormPruebaComponent } from './components/operaciones/pruebas/form-prueb
 import { ResumenComponent } from './components/mascotas/resumen/resumen.component';
 import { AvisoNuevoTratamientoComponent } from './components/operaciones/tratamientos/aviso-nuevo-tratamiento/aviso-nuevo-tratamiento.component';
 import { FormClienteContactoComponent } from './components/clientes/form-cliente-contacto/form-cliente-contacto.component';
-import { DisplayComponent } from './components/app-data/veterinarios/display/display.component';
+import { DisplayComponent as DisplayVeterinario } from './components/app-data/veterinarios/display/display.component';
+import { DisplayComponent as DisplayCliente } from './components/clientes/display/display.component';
 import { FormVacunaComponent } from './components/operaciones/vacunas/form-vacuna/form-vacuna.component';
 import { AvisoNuevaVacunaComponent } from './components/operaciones/vacunas/aviso-nueva-vacuna/aviso-nueva-vacuna.component';
 import { FormDesparasitacionComponent } from './components/operaciones/desparasitaciones/form-desparasitacion/form-desparasitacion.component';
@@ -100,7 +101,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AvisoNuevoTratamientoComponent,
     FormClienteContactoComponent,
     ResumenComponent,
-    DisplayComponent,
+    DisplayVeterinario,
+    DisplayCliente,
     FormVacunaComponent,
     AvisoNuevaVacunaComponent,
     FormDesparasitacionComponent,

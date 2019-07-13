@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="cerrar" (click)="cerrarVentana()"><img src="../../../../assets/img/close_oscuro.png" /></div>
+  <div class="titulo">
+    <div class="frase1">CLIENTE/A</div>
+  </div>
+  <div class="datos">
+    <hr/>
+    <div class="frase2">{{ clienteDisplay.nombre }} {{ clienteDisplay.apellidos }}</div>
+    <div class="frase2">DNI:</div>
+    <div class="frase3">{{ clienteDisplay.dni }}</div>
+    <div class="frase2" *ngIf="contacto">Teléfono:</div>
+    <div class="frase3" *ngIf="contacto">{{ contacto.telefono }}</div>
+    <div class="frase2" *ngIf="clienteDisplay.fecNac">Fecha de nacimiento:</div>
+    <div class="frase3" *ngIf="clienteDisplay.fecNac">{{ clienteDisplay.fecNac | date:'yyyy-MM-dd' }}</div>
+  </div>
+</div>

@@ -24,7 +24,7 @@
                     <td class="colTelefono seleccionado">
                       <span *ngIf="el.contactos && el.contactos[0]">{{ el.contactos[0].telefono }}</span>
                     </td>
-                    <td class="colVisualizar seleccionado">
+                    <td class="colVisualizar seleccionado" (click)="visualizar(el)">
                       <img src="../../../../assets/img/visualizar-oscuro.png" width="25px" height="13px" />
                     </td>
                     <td class="colEditar seleccionado" (click)="editar(el)">
@@ -41,7 +41,7 @@
                     <td class="colTelefono">
                       <span *ngIf="el.contactos && el.contactos[0]">{{ el.contactos[0].telefono }}</span>
                     </td>
-                    <td class="colVisualizar">
+                    <td class="colVisualizar" (click)="visualizar(el)">
                       <img src="../../../../assets/img/visualizar-oscuro.png" width="25px" height="13px" />
                     </td>
                     <td class="colEditar" (click)="editar(el)">
