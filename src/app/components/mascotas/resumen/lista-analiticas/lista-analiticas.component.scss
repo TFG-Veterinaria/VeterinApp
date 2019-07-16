@@ -4,10 +4,19 @@
   display: flex;
   flex-grow: 1;
   width: 100%;
+  height: 100%;
   flex-direction: column;
 
   .titulo_tabla {
     display: flex;
+    margin: 20px;
+    margin-bottom: 0;
+    border-width: 2px;
+    border-style: groove;
+    border-color: #6f7976;
+    border-image: initial;
+    border-bottom: none;
+    box-sizing: border-box;
     height: 25px;
     justify-content: center;
     align-items: center;
@@ -18,19 +27,55 @@
 
   .tabla {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
-    height: 401px;
+    margin: 20px;
+    margin-top: 0;
     font-size: 15px;
     font-weight: normal;
+    border-width: 2px;
+    border-style: groove;
+    border-color: #6f7976;
+    border-image: initial;
+    box-sizing: border-box;
+    border-top: none;
 
     .table {
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      background-color: transparent;
+      color: #fff;
+      background-color: #21252980;
       text-align: center;
       border-spacing: 0px;
+      flex-grow: 1;
+
+      .thead-dark {
+        th {
+          color: #fff;
+          background-color: #21252980;
+          border-color: #121416;
+          padding: 0px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+      .tbody-dark {
+        flex-grow: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: #647572a8;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+
+        td {
+          padding: 0px;
+          padding-top: 7px;
+          padding-bottom: 7px;
+        }
+      }
     }
 
-    .table-dark,
     .table-dark > th,
     .table-dark > td {
       background-color: #030303;
@@ -61,37 +106,9 @@
     }
     thead,
     tbody {
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
-
-    .tbody-dark {
-      height: 364px;
-      overflow-y: auto;
-      overflow-x: hidden;
-      background: #647572a8;
-      -webkit-overflow-scrolling: touch;
-      -ms-overflow-style: -ms-autohiding-scrollbar;
-    }
-
-    .table .thead-dark th {
-      color: #fff;
-      background-color: #21252980;
-      border-color: #121416;
-      padding: 0px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    .table .tbody-dark td {
-      padding: 0px;
-      padding-top: 7px;
-      padding-bottom: 7px;
-    }
-
-    .table-dark {
-      color: #fff;
-      background-color: #21252980;
-    }
-
     .table-dark.table-striped tbody tr:nth-of-type(odd) {
       background-color: rgba(0, 0, 0, 0.151);
     }
