@@ -13,11 +13,21 @@ export class PrincipalComponent implements OnInit {
   @Input() mascota: Mascota;
   @Input() cliente: Cliente;
   @Input() elements: OperacionResumenMascota[];
+  tieneOperaciones: boolean = false;
   
   constructor() { }
 
   ngOnInit() {
+    this.compruebaOperaciones();
     this.inicializaCabecera();
+  }
+
+  compruebaOperaciones() {
+    if (this.elements) {
+      if (this.elements.length > 0) {
+        this.tieneOperaciones = true;
+      }
+    }
   }
 
 

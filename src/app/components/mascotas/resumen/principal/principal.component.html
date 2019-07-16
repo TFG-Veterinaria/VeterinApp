@@ -53,7 +53,7 @@
             <th *ngFor="let head of headElements" class="{{head.clase}}" scope="col">{{head.nombre}} </th>
           </tr>
         </thead>
-        <tbody class=tbody-dark>
+        <tbody class=tbody-dark *ngIf="tieneOperaciones">
           <ng-container *ngFor="let el of elements">
             <tr mdbTableCol>
               <td class="colFecha">{{ el.fecha | date:"dd/MM/yyyy" }}</td>
@@ -63,6 +63,11 @@
                   height="13px"></td>
             </tr>
           </ng-container>
+        </tbody>
+        <tbody class="tbody-dark" *ngIf="!tieneOperaciones">
+          <div class="sinElementos">
+            Aun no se han registrado vacunas en esta mascota.
+          </div>
         </tbody>
       </table>
     </div>
