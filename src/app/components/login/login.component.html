@@ -1,4 +1,4 @@
-<div class="container_oscuro">
+<div class="container_oscuro" *ngIf="isReady">
     <div class="seccion">
 
       <div class="wrapper fadeInDown">
@@ -11,10 +11,10 @@
           </div>
 
           <!-- Login Form -->
-          <form *ngIf="isReady">
+          <form>
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="correo" [(ngModel)]="email" />
             <input type="password" id="password" class="fadeIn third" name="login" placeholder="contraseña" value="{{ password }}" />
-            <input type="submit" class="fadeIn fourth" value="Entrar" (click)="sendLogin()" />
+            <input type="submit" class="fadeIn fourth" style="cursor: pointer;" value="Entrar" (click)="sendLogin()" />
           </form>
           <ng-container *ngIf="showError">
             <p> Usuario o contraseña incorrectos </p>
@@ -22,11 +22,14 @@
 
           <!-- Remind Passowrd -->
           <div id="formFooter" style="color:black;">
-            <input type="checkbox" [(ngModel)]="rememberPass" />
-            Recordar contraseña
+            <input id="recordar" type="checkbox" [(ngModel)]="rememberPass" />
+            <label for="recordar">Recordar contraseña</label>
           </div>
         </div>
       </div>
-
     </div>
+</div>
+<div class="container_oscuro" *ngIf="!isReady">
+  <!-- Dejamos esto para que no pegue pantallazo al cerrar sesión -->
+  <!-- El tiempo de carga es demasiado pequeño para poner un gif de carga, pero lo suficiente para notar el pantallazo -->
 </div>

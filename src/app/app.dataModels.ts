@@ -14,6 +14,7 @@ export class Global {
     descripcion: string;
     resultado: string;
     fecha: Date;
+    idVeterinario: string;
   }
   export class Calendario {
     _id: string;
@@ -74,6 +75,7 @@ export class Global {
     _id: string;
     fecha: Date;
     tipoDesparasitacion: string;
+    idVeterinario: string;
   }
   export class Factura {
     _id: string;
@@ -146,6 +148,7 @@ export class Global {
     tipoPrueba: string;
     fecha: Date;
     radiografias: Radiografia[];
+    idVeterinario: string;
   }
   export class Radiografia {
     _id: string;
@@ -200,6 +203,7 @@ export class Global {
     _id: string;
     fecha: Date;
     tipoVacuna: string;
+    idVeterinario: string;
   }
   export class Veterinario {
     _id: string;
