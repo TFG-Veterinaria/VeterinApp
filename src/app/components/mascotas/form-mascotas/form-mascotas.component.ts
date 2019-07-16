@@ -123,6 +123,11 @@ export class FormMascotasComponent implements OnInit {
         this.globalService.mascotas.find(x => x._id === this.mascotaEditada._id)
       );
       this.globalService.mascotas[index] = this.mascotaEditada;
+      if(this.globalService.mascota){
+        if(this.globalService.mascota._id == this.mascotaEditada._id){
+          this.globalService.mascota = this.mascotaEditada;
+        }
+      }
       this.router.navigateByUrl('/mascotas');
     }).catch((err) => {
       console.log(err);
@@ -138,6 +143,11 @@ export class FormMascotasComponent implements OnInit {
         this.globalService.clientes.find(x => x._id === resCliente._id)
       );
       this.globalService.clientes[index] = resCliente;
+      if(this.globalService.cliente){
+        if(this.globalService.cliente._id == resCliente._id){
+          this.globalService.cliente = resCliente;
+        }
+      }
       this.globalService.setMascota(this.mascotaEditada);
       this.router.navigateByUrl('/mascotas');
     }).catch((err) => {

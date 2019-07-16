@@ -112,6 +112,7 @@ exports.crearTratamiento = function (req, res) {
         diagnostico: req.body.diagnostico,
         tipoTratamiento: req.body.tipoTratamiento,
         fecha: req.body.fecha,
+        idVeterinario: req.body.idVeterinario,
         fecModificacion: new Date()
       }
       Mascota.findByIdAndUpdate(req.body.mascotaId, {

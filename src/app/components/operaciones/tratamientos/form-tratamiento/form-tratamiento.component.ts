@@ -35,10 +35,12 @@ export class FormTratamientoComponent implements OnInit {
         this.tratamientoEditado.diagnostico = params["diagnostico"];
         this.tratamientoEditado.tipoTratamiento = params["tipoTratamiento"];
         this.tratamientoEditado.fecha = params["fecha"];
+        this.tratamientoEditado.idVeterinario = params["idVeterinario"];
         this.ready = true;
       } else {
         this.new = true;
         this.tratamientoEditado.fecha = new Date();
+        this.tratamientoEditado.idVeterinario = this.globalService.veterinario._id;
         this.ready = true;
       }
     });
@@ -68,8 +70,17 @@ export class FormTratamientoComponent implements OnInit {
 
   crear() {
     this.dm.createTratamiento(this.tratamientoEditado, this.globalService.mascota._id).then((res) => {
-      this.globalService.mascota.tratamientos.push(this.tratamientoEditado);
-      this.router.navigateByUrl('/mascota/'+this.globalService.mascota._id);
+      this.globalService.mascota = res;
+      let index = this.globalService.mascotas.indexOf(
+        this.globalService.mascotas.find(x => x._id === res._id)
+      );
+      this.globalService.mascotas[index] = res;
+        
+      let params = {
+        'operacion': 'tratamientos',
+      };
+      this.router.navigate(['/mascota/'+this.globalService.mascota._id, params]);
+      // this.router.navigateByUrl('/mascota/'+this.globalService.mascota._id);
     }).catch((err) => {
       console.log(err);
     });

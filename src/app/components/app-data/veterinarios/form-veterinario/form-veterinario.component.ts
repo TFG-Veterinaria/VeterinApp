@@ -73,6 +73,11 @@ export class FormVeterinarioComponent implements OnInit {
         this.globalService.veterinarios.find(x => x._id === this.veterinarioEditado._id)
       );
       this.globalService.veterinarios[index] = this.veterinarioEditado;
+      if(this.globalService.veterinario){
+        if(this.globalService.veterinario._id == this.veterinarioEditado._id){
+          this.globalService.veterinario = this.veterinarioEditado;
+        }
+      }
       this.router.navigateByUrl('/veterinarios');
     }).catch((err) => {
       console.log(err);

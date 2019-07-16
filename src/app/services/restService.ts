@@ -409,10 +409,13 @@ export class RestWS extends AbstractWS {
     if (tratamiento.fecha) {
       fd = fd.append('fecha', String(tratamiento.fecha));
     }
+    if (tratamiento.idVeterinario) {
+      fd = fd.append('idVeterinario', tratamiento.idVeterinario);
+    }
 
     console.log(fd);
-    return this.makePostRequest(this.path + 'mascotas/addTratamiento', fd).then((_) => {
-      return Promise.resolve();
+    return this.makePostRequest(this.path + 'mascotas/addTratamiento', fd).then((res) => {
+      return Promise.resolve(res);
     }).catch(error => {
       return Promise.reject(error);
     });
@@ -423,6 +426,7 @@ export class RestWS extends AbstractWS {
       .set('anamnesis', tratamiento.anamnesis)
       .set('diagnostico', tratamiento.diagnostico)
       .set('tipoTratamiento', tratamiento.tipoTratamiento)
+      .set('idVeterinario', tratamiento.idVeterinario)
       .set('fecha', String(tratamiento.fecha));
 
     return this.makePostRequest(this.path + 'mascotas/' + mascotaId + '/updateTratamiento/' + tratamiento._id, fd).then(res => {

@@ -31,6 +31,11 @@ export class ResumenComponent implements OnInit {
 
   ngOnInit() {
     this.idMascota = this.route.snapshot.paramMap.get('idMascota');
+    this.route.params.forEach(params => {
+      if (params["operacion"]) {
+        this.muestraSeccion = params["operacion"];
+      }
+    });
     this.tema = "_" + this.globalService.getTema();
     if (this.idMascota) {
       this.mascota = this.globalService.getMascotaPorId(this.idMascota);
