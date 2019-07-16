@@ -35,7 +35,7 @@ export class PrincipalComponent implements OnInit {
     let entrada1: CabeceraTabla = new CabeceraTabla();
     let entrada2: CabeceraTabla = new CabeceraTabla();
     let entrada3: CabeceraTabla = new CabeceraTabla();
-    let entrada4: CabeceraTabla = new CabeceraTabla();
+    // let entrada4: CabeceraTabla = new CabeceraTabla();
     entrada1.nombre = 'Fecha';
     entrada1.clase = 'cabeceraFecha';
     this.headElements.push(entrada1);
@@ -45,8 +45,8 @@ export class PrincipalComponent implements OnInit {
     entrada3.nombre = 'Concepto o descripción';
     entrada3.clase = 'cabeceraDescripcion';
     this.headElements.push(entrada3);
-    entrada4.nombre = 'Ver';
-    entrada4.clase = 'cabeceraVisualizar';
-    this.headElements.push(entrada4);
+    // entrada4.nombre = 'Ver';
+    // entrada4.clase = 'cabeceraVisualizar';
+    // this.headElements.push(entrada4);
   }
 }
