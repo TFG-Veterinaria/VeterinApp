@@ -17,11 +17,11 @@
     border-image: initial;
     border-bottom: none;
     box-sizing: border-box;
-    height: 25px;
+    height: 40px;
     justify-content: center;
     align-items: center;
     background: #00000080;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: bold;
   }
 
@@ -68,11 +68,23 @@
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
 
+        .sinElementos{
+          display: flex;
+          flex-grow: 1;
+          justify-content: center;
+          align-items: center;
+          font-size: 16px;
+          background: #00000061;
+        }
+        
         td {
           padding: 0px;
           padding-top: 7px;
           padding-bottom: 7px;
         }
+      }
+      tr{
+        display: flex;
       }
     }
 
@@ -122,43 +134,89 @@
     }
 
     .cabeceraFecha {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 166px;
       max-width: 166px;
+      min-width: 166px;
       overflow: hidden;
     }
-    .cabeceraTipo {
-      width: 116px;
-      max-width: 116px;
+    .cabeceraNombre {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 216px;
+      max-width: 216px;
+      min-width: 216px;
       overflow: hidden;
     }
     .cabeceraDescripcion {
-      width: 286px;
-      max-width: 286px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+    .cabeceraResultado {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 316px;
+      max-width: 316px;
+      min-width: 316px;
       overflow: hidden;
     }
     .cabeceraVisualizar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 70px;
       max-width: 70px;
+      min-width: 70px;
       overflow: hidden;
     }
 
     .colFecha {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 166px;
       max-width: 166px;
+      min-width: 166px;
       overflow: hidden;
     }
-    .colTipo {
-      width: 116px;
-      max-width: 116px;
+    .colNombre {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 216px;
+      max-width: 216px;
+      min-width: 216px;
       overflow: hidden;
     }
     .colDescripcion {
-      width: 286px;
-      max-width: 286px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+    .colResultado {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 316px;
+      max-width: 316px;
+      min-width: 316px;
       overflow: hidden;
     }
     .colVisualizar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 70px;
+      min-width: 70px;
       max-width: 70px;
       overflow: hidden;
       cursor: pointer;
