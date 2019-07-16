@@ -35,11 +35,11 @@ export class ListaAnaliticasComponent implements OnInit {
     let entrada3: CabeceraTabla = new CabeceraTabla();
     let entrada4: CabeceraTabla = new CabeceraTabla();
     // let entrada5: CabeceraTabla = new CabeceraTabla();
-    entrada1.nombre = 'Nombre';
-    entrada1.clase = 'cabeceraNombre';
+    entrada1.nombre = 'Fecha';
+    entrada1.clase = 'cabeceraFecha';
     this.headElements.push(entrada1);
-    entrada2.nombre = 'Fecha';
-    entrada2.clase = 'cabeceraFecha';
+    entrada2.nombre = 'Nombre';
+    entrada2.clase = 'cabeceraNombre';
     this.headElements.push(entrada2);
     entrada3.nombre = 'Descripcion';
     entrada3.clase = 'cabeceraDescripcion';
