@@ -33,10 +33,12 @@ export class FormDesparasitacionComponent implements OnInit {
         this.desparasitacionEditada._id = params["id"];
         this.desparasitacionEditada.tipoDesparasitacion = params["tipoDesparasitacion"];
         this.desparasitacionEditada.fecha = params["fecha"];
+        this.desparasitacionEditada.idVeterinario = params["idVeterinario"];
         this.ready = true;
       } else {
         this.new = true;
         this.desparasitacionEditada.fecha = new Date();
+        this.desparasitacionEditada.idVeterinario = this.globalService.veterinario._id;
         this.ready = true;
       }
     });
@@ -61,8 +63,16 @@ export class FormDesparasitacionComponent implements OnInit {
 
   crear() {
     this.dm.createDesparasitacion(this.desparasitacionEditada, this.globalService.mascota._id).then((res) => {
-      this.globalService.mascota.desparasitaciones.push(this.desparasitacionEditada);
-      this.router.navigateByUrl('/mascota/'+this.globalService.mascota._id);
+      this.globalService.mascota = res;
+      let index = this.globalService.mascotas.indexOf(
+        this.globalService.mascotas.find(x => x._id === res._id)
+      );
+      this.globalService.mascotas[index] = res;
+        
+      let params = {
+        'operacion': 'desparasitaciones',
+      };
+      this.router.navigate(['/mascota/'+this.globalService.mascota._id, params]);
     }).catch((err) => {
       console.log(err);
     });

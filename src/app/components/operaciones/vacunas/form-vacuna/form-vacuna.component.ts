@@ -33,10 +33,12 @@ export class FormVacunaComponent implements OnInit {
         this.vacunaEditada._id = params["id"];
         this.vacunaEditada.tipoVacuna = params["tipoVacuna"];
         this.vacunaEditada.fecha = params["fecha"];
+        this.vacunaEditada.idVeterinario = params["idVeterinario"];
         this.ready = true;
       } else {
         this.new = true;
         this.vacunaEditada.fecha = new Date();
+        this.vacunaEditada.idVeterinario = this.globalService.veterinario._id;
         this.ready = true;
       }
     });
@@ -60,9 +62,18 @@ export class FormVacunaComponent implements OnInit {
   }
 
   crear() {
-    this.dm.createVacuna(this.vacunaEditada, this.globalService.mascota._id).then((res) => {
-      this.globalService.mascota.vacunas.push(this.vacunaEditada);
-      this.router.navigateByUrl('/mascota/'+this.globalService.mascota._id);
+    this.dm.createVacuna(this.vacunaEditada, this.globalService.mascota._id).then((res) => { 
+      this.globalService.mascota = res;
+      let index = this.globalService.mascotas.indexOf(
+        this.globalService.mascotas.find(x => x._id === res._id)
+      );
+      this.globalService.mascotas[index] = res;
+        
+      let params = {
+        'operacion': 'vacunas',
+      };
+      this.router.navigate(['/mascota/'+this.globalService.mascota._id, params]);
+      
     }).catch((err) => {
       console.log(err);
     });

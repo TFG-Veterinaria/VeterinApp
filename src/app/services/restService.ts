@@ -530,9 +530,12 @@ export class RestWS extends AbstractWS {
     if (vacuna.fecha) {
       fd = fd.append('fecha', String(vacuna.fecha));
     }
+    if (vacuna.idVeterinario) {
+      fd = fd.append('idVeterinario', vacuna.idVeterinario);
+    }
 
-    return this.makePostRequest(this.path + 'mascotas/addVacuna', fd).then((_) => {
-      return Promise.resolve();
+    return this.makePostRequest(this.path + 'mascotas/addVacuna', fd).then((res) => {
+      return Promise.resolve(res);
     }).catch(error => {
       return Promise.reject(error);
     });
@@ -558,9 +561,12 @@ export class RestWS extends AbstractWS {
     if (desparasitacion.fecha) {
       fd = fd.append('fecha', String(desparasitacion.fecha));
     }
+    if (desparasitacion.idVeterinario) {
+      fd = fd.append('idVeterinario', desparasitacion.idVeterinario);
+    }
 
-    return this.makePostRequest(this.path + 'mascotas/addDesparasitacion', fd).then((_) => {
-      return Promise.resolve();
+    return this.makePostRequest(this.path + 'mascotas/addDesparasitacion', fd).then((res) => {
+      return Promise.resolve(res);
     }).catch(error => {
       return Promise.reject(error);
     });
@@ -583,9 +589,6 @@ export class RestWS extends AbstractWS {
     if (analitica.nombre) {
       fd = fd.append('nombre', analitica.nombre);
     }
-    if (analitica.descripcion) {
-      fd = fd.append('descripcion', analitica.descripcion);
-    }
     if (analitica.resultado) {
       fd = fd.append('resultado', analitica.resultado);
     }
@@ -595,9 +598,12 @@ export class RestWS extends AbstractWS {
     if (analitica.fecha) {
       fd = fd.append('fecha', String(analitica.fecha));
     }
+    if (analitica.idVeterinario) {
+      fd = fd.append('idVeterinario', analitica.idVeterinario);
+    }
 
-    return this.makePostRequest(this.path + 'mascotas/addAnalitica', fd).then((_) => {
-      return Promise.resolve();
+    return this.makePostRequest(this.path + 'mascotas/addAnalitica', fd).then((res) => {
+      return Promise.resolve(res);
     }).catch(error => {
       return Promise.reject(error);
     });

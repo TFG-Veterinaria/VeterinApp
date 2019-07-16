@@ -35,10 +35,12 @@ export class FormAnaliticaComponent implements OnInit {
         this.analiticaEditada.descripcion = params["descripcion"];
         this.analiticaEditada.resultado = params["resultado"];
         this.analiticaEditada.fecha = params["fecha"];
+        this.analiticaEditada.idVeterinario = params["idVeterinario"];
         this.ready = true;
       } else {
         this.new = true;
         this.analiticaEditada.fecha = new Date();
+        this.analiticaEditada.idVeterinario = this.globalService.veterinario._id;
         this.ready = true;
       }
     });
@@ -63,8 +65,16 @@ export class FormAnaliticaComponent implements OnInit {
 
   crear() {
     this.dm.createAnalitica(this.analiticaEditada, this.globalService.mascota._id).then((res) => {
-      this.globalService.mascota.analiticas.push(this.analiticaEditada);
-      this.router.navigateByUrl('/mascota/'+this.globalService.mascota._id);
+      this.globalService.mascota = res;
+      let index = this.globalService.mascotas.indexOf(
+        this.globalService.mascotas.find(x => x._id === res._id)
+      );
+      this.globalService.mascotas[index] = res;
+        
+      let params = {
+        'operacion': 'analiticas',
+      };
+      this.router.navigate(['/mascota/'+this.globalService.mascota._id, params]);
     }).catch((err) => {
       console.log(err);
     });
