@@ -12,7 +12,6 @@ import { Mascota, Cliente, Tratamiento } from '../../../app.dataModels';
 })
 export class ResumenComponent implements OnInit {
 
-  headElements: CabeceraTabla[] = [];
   tema: string = "_oscuro";
   elements: OperacionResumenMascota[] = [];
 
@@ -31,7 +30,6 @@ export class ResumenComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.inicializaCabecera();
     this.idMascota = this.route.snapshot.paramMap.get('idMascota');
     this.tema = "_" + this.globalService.getTema();
     if (this.idMascota) {
@@ -112,25 +110,6 @@ export class ResumenComponent implements OnInit {
       if (a.fecha < b.fecha) return 1;
       return 0;
     })
-  }
-
-  inicializaCabecera() {
-    let entrada1: CabeceraTabla = new CabeceraTabla();
-    let entrada2: CabeceraTabla = new CabeceraTabla();
-    let entrada3: CabeceraTabla = new CabeceraTabla();
-    let entrada4: CabeceraTabla = new CabeceraTabla();
-    entrada1.nombre = 'Fecha';
-    entrada1.clase = 'cabeceraFecha';
-    this.headElements.push(entrada1);
-    entrada2.nombre = 'Tipo';
-    entrada2.clase = 'cabeceraTipo';
-    this.headElements.push(entrada2);
-    entrada3.nombre = 'Concepto o descripción';
-    entrada3.clase = 'cabeceraDescripcion';
-    this.headElements.push(entrada3);
-    entrada4.nombre = 'Ver';
-    entrada4.clase = 'cabeceraVisualizar';
-    this.headElements.push(entrada4);
   }
 
   metodoDesarrollo() {

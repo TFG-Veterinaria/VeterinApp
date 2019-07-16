@@ -12,6 +12,7 @@ html, body {
 .app{
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 ::-webkit-scrollbar {
   width: 2px;     /* Tamaño del scroll en vertical */

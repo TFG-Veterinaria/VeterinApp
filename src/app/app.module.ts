@@ -62,6 +62,11 @@ import { AvisoNuevaAnaliticaComponent } from './components/operaciones/analitica
 import { ListaComponent as ListaVacunas } from './components/operaciones/vacunas/lista/lista.component';
 import { ListaComponent as ListaDesparasitaciones } from './components/operaciones/desparasitaciones/lista/lista.component';
 import { ListaComponent as ListaAnaliticas } from './components/operaciones/analiticas/lista/lista.component';
+import { PrincipalComponent } from './components/mascotas/resumen/principal/principal.component';
+import { ListaAnaliticasComponent } from './components/mascotas/resumen/lista-analiticas/lista-analiticas.component';
+import { ListaTratamientosComponent } from './components/mascotas/resumen/lista-tratamientos/lista-tratamientos.component';
+import { ListaVacunasComponent } from './components/mascotas/resumen/lista-vacunas/lista-vacunas.component';
+import { ListaDesparasitacionesComponent } from './components/mascotas/resumen/lista-desparasitaciones/lista-desparasitaciones.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -111,7 +116,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     AvisoNuevaAnaliticaComponent,
     ListaVacunas,
     ListaDesparasitaciones,
-    ListaAnaliticas
+    ListaAnaliticas,
+    PrincipalComponent,
+    ListaAnaliticasComponent,
+    ListaTratamientosComponent,
+    ListaVacunasComponent,
+    ListaDesparasitacionesComponent
   ],
   imports: [
     BrowserModule,

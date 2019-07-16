@@ -1,0 +1,25 @@
+<div class="resumen">
+  <div class="titulo_tabla">
+    Resumen del historial
+  </div>
+  <div class="tabla">
+    <table mdbTable striped="true" class="table table-striped table-dark table-hover">
+      <thead class=thead-dark>
+        <tr>
+          <th *ngFor="let head of headElements" class="{{head.clase}}" scope="col">{{head.nombre}} </th>
+        </tr>
+      </thead>
+      <tbody class=tbody-dark>
+        <ng-container *ngFor="let el of elements">
+          <tr mdbTableCol>
+            <td class="colFecha">{{ el.fecha | date:"dd/MM/yyyy" }}</td>
+            <td class="colTipo">{{ el.tipo }}</td>
+            <td class="colDescripcion">{{ el.descripcion }}</td>
+            <td class="colVisualizar"><img src="../../../../assets/img/visualizar-oscuro.png" width="25px"
+                height="13px"></td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>

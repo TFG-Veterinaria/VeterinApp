@@ -1,0 +1,154 @@
+@import "../../../../utilities/variables.scss";
+
+.resumen {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  flex-direction: column;
+
+  .titulo_tabla {
+    display: flex;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    background: #00000080;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .tabla {
+    display: flex;
+    flex-grow: 1;
+    height: 401px;
+    font-size: 15px;
+    font-weight: normal;
+
+    .table {
+      width: 100%;
+      background-color: transparent;
+      text-align: center;
+      border-spacing: 0px;
+    }
+
+    .table-dark,
+    .table-dark > th,
+    .table-dark > td {
+      background-color: #030303;
+    }
+
+    .table-hover .table-dark:hover {
+      background-color: #030303;
+    }
+
+    .table-hover .table-dark:hover > td,
+    .table-hover .table-dark:hover > th {
+      background-color: #030303;
+    }
+
+    .table-active,
+    .table-active > th,
+    .table-active > td {
+      background-color: rgba(0, 0, 0, 0.075);
+    }
+
+    .table-hover .table-active:hover {
+      background-color: rgba(0, 0, 0, 0.075);
+    }
+
+    .table-hover .table-active:hover > td,
+    .table-hover .table-active:hover > th {
+      background-color: rgba(0, 0, 0, 0.075);
+    }
+    thead,
+    tbody {
+      display: block;
+    }
+
+    .tbody-dark {
+      height: 364px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background: #647572a8;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+    .table .thead-dark th {
+      color: #fff;
+      background-color: #21252980;
+      border-color: #121416;
+      padding: 0px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .table .tbody-dark td {
+      padding: 0px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+
+    .table-dark {
+      color: #fff;
+      background-color: #21252980;
+    }
+
+    .table-dark.table-striped tbody tr:nth-of-type(odd) {
+      background-color: rgba(0, 0, 0, 0.151);
+    }
+
+    .table-dark.table-striped tbody tr:nth-of-type(even) {
+      background-color: rgba(0, 0, 0, 0.308);
+    }
+
+    .table-dark.table-hover tbody tr:hover {
+      background-color: rgba(255, 255, 255, 0.185);
+    }
+
+    .cabeceraFecha {
+      width: 166px;
+      max-width: 166px;
+      overflow: hidden;
+    }
+    .cabeceraTipo {
+      width: 116px;
+      max-width: 116px;
+      overflow: hidden;
+    }
+    .cabeceraDescripcion {
+      width: 286px;
+      max-width: 286px;
+      overflow: hidden;
+    }
+    .cabeceraVisualizar {
+      width: 70px;
+      max-width: 70px;
+      overflow: hidden;
+    }
+
+    .colFecha {
+      width: 166px;
+      max-width: 166px;
+      overflow: hidden;
+    }
+    .colTipo {
+      width: 116px;
+      max-width: 116px;
+      overflow: hidden;
+    }
+    .colDescripcion {
+      width: 286px;
+      max-width: 286px;
+      overflow: hidden;
+    }
+    .colVisualizar {
+      width: 70px;
+      max-width: 70px;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:hover {
+        background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.397) 0%, rgba(0, 0, 0, 0) 80%);
+      }
+    }
+  }
+}
