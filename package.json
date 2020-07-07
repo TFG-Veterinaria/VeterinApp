@@ -87,7 +87,7 @@
   },
   "devDependencies": {
     "electron-builder": "^19.53.5",
-    "electron": "^4.1.0",
+    "electron": "^9.1.0",
     "electron-packager": "^13.1.1",
     "electron-winstaller": "^3.0.4"
   }
